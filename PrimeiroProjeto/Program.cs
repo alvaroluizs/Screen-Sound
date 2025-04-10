@@ -1,9 +1,43 @@
-﻿//SCREEN SOUND
+﻿// SCREEN SOUND
 string mensagemBoasVindas = "Boas Vindas ao Screen Sound";
+Console.WriteLine(mensagemBoasVindas);
 
-void ExibirMensagemDeBoasVindas()
+void ExibirOpcoesDoMenu()
 {
-    Console.WriteLine(@"
+    Console.WriteLine("\nDigite 1 para registrar uma banda");
+    Console.WriteLine("Digite 2 para mostrar todas as bandas");
+    Console.WriteLine("Digite 3 para avaliar uma banda");
+    Console.WriteLine("Digite 4 para exibir a média de uma banda");
+    Console.WriteLine("Digite -6 para sair");
+
+    Console.Write("\nDigite a sua opção: ");
+    string opcaoEscolhida = Console.ReadLine()!;
+    int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
+
+    switch (opcaoEscolhidaNumerica)
+    {
+        case 1:
+            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 2:
+            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 3:
+            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 4:
+            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case -1:
+            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        default:
+            Console.WriteLine("Opção Inválida");
+            break;
+    }
+}
+
+string screenSound = @"
  
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
 ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
@@ -11,23 +45,15 @@ void ExibirMensagemDeBoasVindas()
 ░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
 ██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░       
+";
 
-");
+void ExibirMensagemDeBoasVindas()
+{
+    Console.WriteLine(screenSound);
     Console.WriteLine(mensagemBoasVindas);
 }
-    {
-        string mensagemDeBoasVindas = "Boas Vindas ao Screen Sound";
-        Console.WriteLine(mensagemDeBoasVindas);
-    }
-    void ExibirOpcoesDoMenu()
-{
-    Console.WriteLine("\nDigite 1 para registra uma banda");
-    Console.WriteLine("Digite 2 para mostrar todas as bandas");
-    Console.WriteLine("Digite 3 para avaliar uma banda");
-    Console.WriteLine("Digite 4 para exibir a media de uma banda");
-    Console.WriteLine("Digite -1 para sair");
 
-    }
 
-    ExibirMensagemDeBoasVindas();
-    ExibirOpcoesDoMenu();
+ExibirMensagemDeBoasVindas();
+
+ExibirOpcoesDoMenu();
