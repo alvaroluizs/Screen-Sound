@@ -17,7 +17,7 @@ void ExibirOpcoesDoMenu()
     switch (opcaoEscolhidaNumerica)
     {
         case 1:
-            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            RegistrarBanda();
             break;
         case 2:
             Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
@@ -53,6 +53,17 @@ void ExibirMensagemDeBoasVindas()
     Console.WriteLine(mensagemBoasVindas);
 }
 
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("Registro de Bandas");
+    Console.Write("Digite o nome da Banda que deseja registrar: ");
+    string NomeDaBanda = Console.ReadLine();
+    Console.WriteLine($"A Banda {NomeDaBanda} foi registrada com sucesso! ");
+    Thread.Sleep(2000);
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+}
 
 ExibirMensagemDeBoasVindas();
 
