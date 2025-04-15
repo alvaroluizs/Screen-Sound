@@ -1,4 +1,6 @@
 ﻿// SCREEN SOUND
+using System.Runtime.InteropServices.Marshalling;
+
 string mensagemBoasVindas = "Boas Vindas ao Screen Sound";
 Console.WriteLine(mensagemBoasVindas);
 List<string> listaDasBandas = new List<string> {"U2", "The Beatles", "Calipson" };
@@ -57,9 +59,7 @@ void ExibirLogo()
 void RegistrarBanda()
 {
     Console.Clear();
-    Console.WriteLine("*********************");
-    Console.WriteLine("Registro de Bandas");
-    Console.WriteLine("*********************\n");
+    ExibirTituloDaOpcao("Registro das Bandas");
     Console.Write("Digite o nome da Banda que deseja registrar: ");
     string NomeDaBanda = Console.ReadLine();
     listaDasBandas.Add(NomeDaBanda);
@@ -72,10 +72,7 @@ void RegistrarBanda()
 void MostrarBandasRegistradas()
 {
     Console.Clear();
-    Console.WriteLine("*************************************");
-    Console.WriteLine("Exibindo todas as bandas registradas! ");
-    Console.WriteLine("*************************************\n");
-    Console.WriteLine("Digite o nome da Banda que deseja registrar: ");
+    ExibirTituloDaOpcao("Exibindo todas as bandas registradas na nossa aplicação");
 
    // for (int i = 0; i < listaDasBandas.Count; i++)
    // {
@@ -91,6 +88,18 @@ void MostrarBandasRegistradas()
     Console.Clear();
     ExibirOpcoesDoMenu();
 }
+
+void ExibirTituloDaOpcao(string titulo)
+{
+    int quantidadeDeLetras = titulo.Length;
+    string asteriscos = string.Empty.PadLeft(quantidadeDeLetras, '*');
+    Console.WriteLine(asteriscos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(asteriscos + "\n");
+
+}
+
+
 ExibirOpcoesDoMenu();
 
 
